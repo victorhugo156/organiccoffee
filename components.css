@@ -1,0 +1,53 @@
+
+/*----- BLACK-BUTTONS -----*/
+
+.btn{
+    width: 150px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--black);
+}
+
+.btn a{
+
+    font-family: code-saver, sans-serif;
+    color: var(--white);
+    text-transform: uppercase;
+
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: var(--orange);
+}
+
+/*----- STROKE-ORANGE-BUTTONS -----*/
+
+.btn-stroke{
+    width: 200px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid var(--orange);
+    border-radius: 15px;
+}
+
+.btn-stroke a{
+
+    font-family: code-saver, sans-serif;
+    color: var(--white);
+    text-transform: uppercase;
+
+    text-decoration: none;
+}
+
+.btn-stroke a:hover{
+    color: var(--orange);
+}

@@ -1,0 +1,634 @@
+/*----- Global -----*/
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    font-family: bennet-banner, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-align-center{
+    max-width: 80%;
+    margin: 0 auto;
+
+    margin-top: 15rem;
+}
+
+.section{
+    margin-bottom: 7.5rem;
+}
+
+.divider{
+    background-color: var(--black);
+    height: 1px;
+}
+
+
+/*----- HEADER ----*/
+
+.icon-menu,
+.icon-close{
+    display: none;
+}
+
+.header-scroll{
+    background-color: var(--white);
+    width: 80%;
+    min-height: 5rem;
+
+    position: fixed;
+    top: 0;
+    z-index: 100;
+
+    border-bottom: 2px solid var(--black);
+}
+
+.container-nav{
+    width: 100%;
+    padding: 1.5rem 0 0 0;
+    margin-bottom: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.container-menu{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+nav img{
+    height: 100px;
+}
+
+
+nav .menu{
+    width: 50%;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding-top: 1.5rem;
+}
+
+nav .menu a{
+    font-family: code-saver, sans-serif;
+    font-weight: 700;
+
+    color: var(--black);
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: color 0.3s;
+    position: relative;
+}
+
+nav .menu a:hover{
+    color: var(--orange);
+}
+
+nav .menu a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--orange);
+
+    position: absolute;
+    left: 0;
+    bottom: -1.5rem;
+
+    transition: width 0.2s;
+}
+
+nav .menu a:hover::after{
+    width: 100%;
+}
+
+nav .container-menu .show{
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*----- TITLE - SIGNATURE ----*/
+
+.divider-title{
+    height: 2px;
+    width: 550px;
+    background-color: var(--orange);
+
+    margin-bottom: 1rem;
+}
+
+/*----- FOOTER  ----*/
+
+.container-form{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.container-news-latter{
+    background-color: var(--orange);
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 1rem;
+
+}
+
+.news-latter-form{
+    background-color: var(--black);
+
+    width: 200px;
+    height: 40px;
+
+    margin-right: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.news-latter-form p{
+    color: var(--white);
+    font-size: 1.5rem;
+
+    text-transform: uppercase;
+
+}
+
+.form{
+    width: 900px;
+    height: 40px;
+
+    display: flex;
+    
+}
+
+#input-name,
+#input-mail{
+    width: 550px;
+    height: 35px;
+
+    margin-right: 0.5rem;
+}
+
+
+.btn-submit{
+    background-color: black;
+
+    color: var(--white);
+
+    width: 150px;
+    height: 100%;
+
+    text-transform: uppercase;
+
+    border: none;
+
+}
+
+.container-contact{
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    align-items: center; 
+}
+
+.container-contact .container:first-child{
+    width: 30%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.box-follow{
+    background-color: var(--black);
+
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+
+    width: 200px;
+    height: 40px;
+
+    margin-bottom: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-weight: 700;
+    text-transform: uppercase;
+
+    gap: 30px;
+}
+
+.container-contact .container:last-child{
+    width: 70%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-left: 2px solid var(--black);
+}
+
+.box-contact{
+    background-color: var(--black);
+
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+
+    width: 700px;
+    height: 40px;
+
+    margin-bottom: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-contact{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.container-address{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 3rem;
+}
+
+.container-states{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.state{
+    font-weight: 700;
+}
+
+/*------------------------- extra large devices: >= 1200px --------------------------------------*/
+
+@media (min-width: 1800px){
+    
+    /*----- HEADER ----*/
+    
+    .header-scroll{
+        height: 22rem;
+    }
+    
+    nav img{
+        height: 200px;
+    }
+     
+    nav .menu{
+        padding-top: 3.5rem;
+    }
+    
+    nav .menu a{
+        font-weight: 300;
+        font-size: 1.5rem;
+    }
+    
+    /*----- FOOTER  ----*/
+    
+    .form{
+        width: 1200px;
+    }
+    
+    .container-contact{
+        width: 100%;
+        height: 300px;
+    
+        display: flex;
+        align-items: center; 
+    }
+    
+    .container-contact .container:first-child{
+        width: 30%;
+        height: 100%;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+    
+    .box-follow{
+        background-color: var(--black);
+    
+        color: white;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+    
+        width: 200px;
+        height: 40px;
+    
+        margin-bottom: 3rem;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .social-media{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        font-weight: 700;
+        text-transform: uppercase;
+    
+        gap: 30px;
+    }
+    
+    .container-contact .container:last-child{
+        width: 70%;
+        height: 100%;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        border-left: 2px solid var(--black);
+    }
+    
+    .box-contact{
+        width: 90%;
+    }
+    
+    .email-contact{
+        font-size: 2rem;
+    }
+    
+    .container-address{
+        width: 50%;
+    
+    }
+    
+    .container-states{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+
+/*------------------------------------- M O B I B L E ----------------------------------------------*/
+
+@media only screen and (max-width: 600px){
+
+    /*----- HEADER ----*/
+
+/* Menu Hamburguer */
+
+nav ul.menu{
+    visibility: hidden;
+    
+}
+
+nav div.icon-menu{
+    display: flex;
+    position: absolute;
+    right: 1.5rem;
+}
+
+
+/* Menu Activated */
+
+nav.show ul.menu{
+    visibility: visible;
+}
+
+nav.show .menu a{
+   font-size: 2rem;
+    }
+
+nav.show .container-menu{
+    opacity: 1;
+    visibility: visible;
+
+    background-color:white;
+
+    height: 100vh;
+    width: 100vw;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav.show .menu{
+    flex-direction: column;
+    place-content: center;
+
+    gap: 5rem;
+}
+
+/*----- TOGGLE MENU ----*/
+
+.toggle{
+    color: var(--orange);
+    font-size: 1.5rem;
+}
+
+nav .icon-close{
+    visibility: hidden;
+    opacity: 0;
+
+    display: flex;
+    position: absolute;
+    right: 1.5rem;
+}
+
+nav.show div.icon-close{
+    visibility: visible;
+    opacity: 1;
+}
+
+nav.show div.icon-menu{
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+        /*----- FOOTER ----*/
+
+.container-form{
+    width: 100%;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;  
+}
+
+.container-news-latter{
+    background-color: var(--orange);
+    width: 100%;
+    height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-bottom: 2rem;
+
+}
+
+.news-latter-form{
+    background-color: var(--black);
+
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    
+    margin-bottom: 2rem;
+
+}
+
+.news-latter-form p{
+    color: var(--white);
+    font-size: 1.5rem;
+
+    text-transform: uppercase;
+
+}
+
+.form{
+    width: 95%;
+    height: 150px;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 0.5rem;
+
+    gap: 1rem;
+}
+
+#input-name,
+#input-mail{
+    width: 95%;
+    height: 2rem;
+
+}
+
+.btn-submit{
+    background-color: black;
+
+    color: var(--white);
+
+    width: 100%;
+    height: 2rem;
+
+    text-transform: uppercase;
+
+    border: none;
+}
+
+
+.container-contact{
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.container-contact .container:first-child{
+    width: 100%;
+    height: 100%;
+
+    margin-bottom: 3rem;
+}
+
+.box-follow{
+    width: 100%;
+    height: 40px;
+
+    margin-bottom: 1rem;
+}
+
+.social-media{
+    gap: 5px;
+}
+
+.container-contact .container:last-child{
+    width: 100%;
+    height: 100%;
+
+    border-left: none;
+}
+
+.box-contact{
+    width: 100%;
+    height: 40px;
+
+    margin-bottom: 3rem;
+}
+
+.email-contact{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.container-address{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    margin-top: 3rem;
+}
+
+.container-states{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.state{
+    font-weight: 700;
+}
+
+}

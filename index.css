@@ -1,0 +1,625 @@
+
+/*----- DIVIDERS -----*/
+
+.divider-title{
+    height: 2px;
+    width: 550px;
+    background-color: var(--orange);
+
+    margin: 0.5rem 0 5rem 0
+}
+
+.divider-vertical-longer{
+    border-right: 2px solid var(--black);
+    height: 100%;
+    width: 2px;
+}
+
+.divider-vertical{
+    border-right: 2px solid var(--black);
+    height: 325px;
+    width: 2px;
+
+    margin: 0 20px 0 20px;
+}
+
+.container-divider-img{
+    background-image: url(img/header-coffee-mug-pb.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: -15px ;
+    
+    width: 100%;
+    height: 15.5rem;
+
+    margin-bottom: 12.5rem;
+    
+}
+
+/*----- HOME -----*/
+
+.container-section-one{
+    background-color: white;
+    background-attachment: fixed;
+    width: 100%;
+    height: 24rem;
+}
+
+.container-signature{
+    padding: 5rem 2rem 0;
+}
+
+.container-section-one h2{
+    font-family: var(--title-logo);
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+
+}
+
+.container-section-one h1{
+    font-family: var(--title-logo);
+    font-size: 3.55rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 3.2rem;
+
+    margin-top: 3rem;
+}
+
+/*----- ABOUT -----*/
+
+.container-section-two{
+    width: 100%;
+
+    margin-bottom: 10rem;
+}
+
+.container-about{
+    height: 16.68rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-about h2{
+    font-size: 2.5rem;
+
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.three-containers{
+    height: 30rem;
+
+    display: flex;
+}
+
+.container-coffee-bean{
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.container-text{
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2rem;
+
+    text-align: center;
+
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+
+.container-logo-foundation{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.three-containers div:first-child{
+    width: 30%;
+
+    align-content: center;
+}
+.three-containers div:nth-child(2){
+    width: 40%;
+
+    border-right: 2px solid var(--black);
+    border-left: 2px solid var(--black);
+}
+.three-containers div:last-child{
+    width: 30%;
+    
+}
+
+
+/*----- HOW DOES IT WORKS & AWARDS-----*/
+
+.container-section-three{
+    width: 100%;
+    height: 50rem;
+    display: flex;
+}
+
+/*----- CAROSEL-SETUP-----*/
+
+.container-carosel{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 2.5rem;
+}
+
+.container-carosel h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.container-carosel-img{
+    background-color: antiquewhite;
+    position: relative;
+    height: 40rem;
+    width: 33rem;
+
+    border: 5px solid var(--orange);
+
+    border-radius: 1rem;
+
+    overflow: hidden;
+    
+}
+
+.btn_next,
+.btn_back{
+    position: absolute;
+    top: 50%;
+
+    width: 2.25rem;
+    height: 2.25rem;
+
+    background-color: var(--orange);
+    
+    border-radius: 50%;
+    border: none;
+
+    z-index: 10; /* z index will put the content in front of the img */
+
+}
+
+.btn_next{
+    left: 90%;
+}
+
+.btn_back{
+    left: 3%;
+}
+
+
+.list_images{
+    position: relative;
+
+    height: 100%;
+}
+
+.carosel_img_box{
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    width: 100%;
+}
+
+.carosel_images{
+    width: 528px;
+    
+    object-fit: cover;
+}
+
+.carosel_indicators{
+    position: absolute;
+    top: calc(100vh - -137rem);
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carosel_indicator{
+    width: 2.25rem;
+    height: .25rem;
+
+    background-color: var(--orange);
+
+    border-radius: 2rem;
+
+    border: none;
+    margin: .5rem 1rem;
+}
+
+/*-----------------------------------*/
+
+.container-award{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    gap: 2.5rem;
+}
+
+.container-award h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.container-award p{
+    text-align: center;
+}
+
+.container-section-three div:first-child{
+    width: 50%;
+}
+
+.container-section-three div:last-child{
+    width: 50%;
+
+    border-left: 2px solid var(--black);
+}
+
+
+/*-----WHAT IS COFFEE GRIND?-----*/
+
+.container-sec-four{
+    width: 100%;
+    height: 75rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 3rem;
+
+}
+
+.container-process-title{
+    display: flex;
+    flex-direction: column;
+    
+    padding-top: 5rem;
+}
+
+.container-process-title h1{
+    color: var(--black);
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+
+    margin-bottom: 2rem;
+}
+
+.container-process-text{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    margin-bottom: 3rem;
+}
+
+.container-process-text p{
+    width: 45rem;
+    color: var(--black);
+
+}
+
+.container-img-process{
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 3rem;
+
+}
+
+.container-img-process img{
+    width: 100%;
+}
+
+/*------------------------- extra large devices: >= 1200px --------------------------------------*/
+
+@media (min-width: 1800px){
+
+/*----- HOME -----*/
+
+.container-signature{
+    padding: 15rem 2rem 0;
+}
+
+.container-section-one{
+    height: 40rem;
+}
+
+/*----- ABOUT -----*/
+
+.container-coffee-bean img{
+    height: 900px;
+}
+
+/*----- DIVIDER IMG -----*/
+
+.container-divider-img{
+    height: 12.5rem;
+}
+
+
+/*----- HOW DOES IT WORKS & AWARDS-----*/
+
+
+.container-section-three{
+    width: 100%;
+    height: 55rem;
+    display: flex;
+
+    margin-bottom: 12.5rem;
+}
+
+.container-carosel{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 2.5rem;
+}
+
+
+.container-carosel-img{
+    height: 39rem;
+}
+
+.container-carosel h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+    
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------- M O B I B L E ----------------------------------------------*/
+
+@media only screen and (max-width: 600px){
+
+    /*----- DIVIDERS -----*/
+
+    .container-divider-img{
+        width: 100%;
+        height: 3.5rem;
+    
+        margin-bottom: 5rem; 
+    }
+
+
+
+
+
+    .container-section-one{
+        width: 100%;
+        height: 10rem;
+    }
+
+    .container-signature{
+        padding: 2rem 0.75rem 0;
+    }
+
+    .container-section-one h2{
+        font-size: 1.60rem;
+    }
+
+    .divider-title{
+        height: 2px;
+        width: 300px;
+    }
+
+    .container-section-one h1{
+        font-size: 1.28rem;
+        line-height: 2.2rem;
+
+        margin-top: -2rem;
+    }
+
+        /*----- ABOUT -----*/
+
+    .container-section-two{
+        width: 100%;
+        
+        margin-bottom: 30rem;
+    }
+
+    .container-about{
+        height: 10rem;
+    }
+
+    .container-about h2{
+        font-size: 2rem;
+    
+    }
+
+    .container-text{
+        height: 100%;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        text-align: center;
+    
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .three-containers{
+        height: 30rem;
+    
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .container-coffee-bean{
+    
+        height: 10px;
+
+        overflow: visible;
+        
+    }
+
+    .container-coffee-bean img{
+        width: 80%;
+
+        position: absolute;
+
+        opacity: 0.1;
+
+        top: 40rem;
+        
+        right: 2rem;
+
+        overflow: hidden;
+    }
+
+    .three-containers div:first-child{
+        width: 500px;
+        height: 800px;
+    
+    }
+
+    .three-containers div:nth-child(2){
+        width: 100%;
+    
+        border-right: none;
+        border-left: none;
+
+        margin-bottom: 3rem;
+    }
+
+    .three-containers div:last-child{
+        width: 100%;
+    }
+
+    /*----- HOW DOES IT WORKS & AWARDS-----*/
+
+    .container-section-three{
+        width: 100%;
+        height: 85rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-section-three div:first-child{
+        width: 100%;
+    }
+    
+    .container-section-three div:last-child{
+        width: 100%;
+    
+        border-left: none;
+    }
+
+    .container-carosel{
+        width: 100%;
+        height: 700px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-bottom: 5rem;
+
+    }
+
+    .container-carosel-img{
+        width: 90%;
+        height: 30rem;
+    }
+    
+    .container-carosel h2{
+        font-size: 1.75rem;
+        font-weight: 700;
+    }
+
+    .container-award img{
+        width: 98%;
+    }
+
+    .container-award h2{
+        font-size: 2rem;
+    }
+
+
+    /*-----WHAT IS COFFEE GRIND?-----*/
+
+    .container-sec-four{
+        height: 55rem;
+    }
+
+    .container-process-title h1{
+        font-size: 2rem;
+
+        margin-bottom: 1rem;
+    }
+
+    .container-process-text{
+        width: 100%;
+    
+        margin-bottom: 1rem;
+    }
+
+
+
+
+
+
+
+
+
+}
+
+
